@@ -2,7 +2,7 @@
 
 int main(int argc , char * argv[]){
 	if(argc!=2){
-		printf("./user_client [1-3] \n 1 : ping\n 2 : open\n 3 : poweroff\n");
+		printf("./user_client [1-3] \n 1 : ping\n 2 : open\n 3 : poweroff\n 4 : reboot");
 		return 0;
 	}
 	client_init(4);
@@ -11,6 +11,7 @@ int main(int argc , char * argv[]){
 		case 1 : strcpy(buffer,"ping"); break;
 		case 2 : strcpy(buffer,"openpc"); break;
 		case 3 : strcpy(buffer,"poweroff"); break;
+		case 4 : strcpy(buffer,"reboot"); break;
 	}
 	n = write(sockfd,buffer,strlen(buffer));
 	bzero(buffer,STR_SZ);
