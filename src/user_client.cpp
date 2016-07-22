@@ -2,7 +2,7 @@
 
 int main(int argc , char * argv[]){
 	if(argc!=2){
-		printf("./user_client [1-3] \n 1 : ping\n 2 : open\n 3 : poweroff\n 4 : reboot");
+		printf("./user_client [1-3] \n 1 : ping\n 2 : open\n 3 : poweroff\n 4 : reboot\n");
 		return 0;
 	}
 	client_init(4);
