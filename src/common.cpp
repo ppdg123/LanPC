@@ -85,6 +85,11 @@ void commandParse(char * cmd){
 		n = write(newsockfd,"poweroff_received",strlen("poweroff_received")+1);
 		return;
 	}
+	if(id==1&&0==strncmp(cmd,"reboot",strlen("reboot"))){
+		rebootflag = 1;
+		n = write(newsockfd,"reboot_received",strlen("reboot_received")+1);
+		return;
+	}
 		//lan client send command
 	if(id==1&&0==strncmp(cmd,"lancommand?",strlen("lancommand?"))){
 		lantime = time(NULL);
